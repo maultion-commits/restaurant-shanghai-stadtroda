@@ -120,7 +120,9 @@
 
   <section id="about" class="about reveal">
     <div class="section-inner about-grid">
-      <div class="about-graphic" style="background-image:url('assets/photos/drache.jpg'),linear-gradient(160deg,var(--red) 0%,var(--red-dark) 60%,var(--charcoal) 100%)" role="img" aria-label="Drachen-Dekoration im Restaurant Shanghai"></div>
+      <div class="about-graphic" style="background-image:linear-gradient(160deg,var(--red) 0%,var(--red-dark) 60%,var(--charcoal) 100%)">
+        <img src="assets/photos/drache.jpg" alt="Drachen-Dekoration im Restaurant Shanghai" loading="lazy" decoding="async" onerror="this.style.display='none'">
+      </div>
       <div class="about-text">
         <span class="eyebrow">Über uns</span>
         <h2>Willkommen im Restaurant Shanghai</h2>
@@ -499,13 +501,12 @@
           Auf Facebook folgen
         </a>
       </div>
-      <div class="fb-embed-wrap">
-        <iframe
-          title="Facebook-Seite Chinarestaurant Shanghai Stadtroda"
-          src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fsanghaistadtroda%2F&tabs=timeline&width=500&height=620&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true"
-          width="100%" height="620" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
-          allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" loading="lazy">
-        </iframe>
+      <div class="fb-embed-wrap" id="fbEmbedWrap">
+        <button type="button" class="fb-embed-facade" id="fbEmbedFacade">
+          <svg class="i" viewBox="0 0 24 24"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.4h-1.2c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.4v7A10 10 0 0 0 22 12z"/></svg>
+          <span>Facebook-Beiträge laden</span>
+          <span class="fb-embed-hint">Lädt Inhalte von facebook.com – dabei werden Daten an Meta übertragen. <a href="datenschutz.html">Mehr dazu</a></span>
+        </button>
       </div>
     </div>
   </section>
@@ -577,10 +578,18 @@
       <span class="eyebrow center">Galerie</span>
       <h2 class="center">Impressionen aus dem Restaurant</h2>
       <div class="gallery-grid" id="galleryGrid">
-        <button class="gallery-item" style="background-image:url('assets/photos/aussenansicht.jpg'),linear-gradient(160deg,var(--red) 0%,var(--red-dark) 100%)" data-full="assets/photos/aussenansicht.jpg" data-caption="Unser Restaurant Unterm Markt 10 in Stadtroda" aria-label="Außenansicht vergrößern"></button>
-        <button class="gallery-item" style="background-image:url('assets/photos/drache.jpg'),linear-gradient(160deg,var(--gold) 0%,var(--red-dark) 100%)" data-full="assets/photos/drache.jpg" data-caption="Traditionelle Drachen-Dekoration" aria-label="Deko vergrößern"></button>
-        <button class="gallery-item" style="background-image:url('assets/photos/gericht-ente-1.jpg'),linear-gradient(160deg,var(--red-dark) 0%,var(--charcoal) 100%)" data-full="assets/photos/gericht-ente-1.jpg" data-caption="Knusprige Ente mit Nudeln" aria-label="Gericht vergrößern"></button>
-        <button class="gallery-item" style="background-image:url('assets/photos/Limonade.jpg'),linear-gradient(160deg,var(--charcoal) 0%,var(--red) 100%)" data-full="assets/photos/Limonade.jpg" data-caption="Hausgemachte Limonade mit frischer Minze" aria-label="Getränk vergrößern"></button>
+        <button class="gallery-item" style="background-image:linear-gradient(160deg,var(--red) 0%,var(--red-dark) 100%)" data-full="assets/photos/aussenansicht.jpg" data-caption="Unser Restaurant Unterm Markt 10 in Stadtroda" aria-label="Außenansicht vergrößern">
+          <img src="assets/photos/aussenansicht.jpg" alt="" loading="lazy" decoding="async" onerror="this.style.display='none'">
+        </button>
+        <button class="gallery-item" style="background-image:linear-gradient(160deg,var(--gold) 0%,var(--red-dark) 100%)" data-full="assets/photos/drache.jpg" data-caption="Traditionelle Drachen-Dekoration" aria-label="Deko vergrößern">
+          <img src="assets/photos/drache.jpg" alt="" loading="lazy" decoding="async" onerror="this.style.display='none'">
+        </button>
+        <button class="gallery-item" style="background-image:linear-gradient(160deg,var(--red-dark) 0%,var(--charcoal) 100%)" data-full="assets/photos/gericht-ente-1.jpg" data-caption="Knusprige Ente mit Nudeln" aria-label="Gericht vergrößern">
+          <img src="assets/photos/gericht-ente-1.jpg" alt="" loading="lazy" decoding="async" onerror="this.style.display='none'">
+        </button>
+        <button class="gallery-item" style="background-image:linear-gradient(160deg,var(--charcoal) 0%,var(--red) 100%)" data-full="assets/photos/Limonade.jpg" data-caption="Hausgemachte Limonade mit frischer Minze" aria-label="Getränk vergrößern">
+          <img src="assets/photos/Limonade.jpg" alt="" loading="lazy" decoding="async" onerror="this.style.display='none'">
+        </button>
       </div>
     </div>
   </section>

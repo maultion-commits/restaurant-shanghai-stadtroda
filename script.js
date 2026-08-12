@@ -227,6 +227,24 @@ function renderOpeningStatus() {
 renderOpeningStatus();
 setInterval(renderOpeningStatus, 60000);
 
+// Facebook embed: only load the heavy plugin iframe once the user opts in (click-to-load)
+const fbFacade = document.getElementById('fbEmbedFacade');
+fbFacade?.addEventListener('click', () => {
+  const wrap = document.getElementById('fbEmbedWrap');
+  const iframe = document.createElement('iframe');
+  iframe.title = 'Facebook-Seite Chinarestaurant Shanghai Stadtroda';
+  iframe.src = 'https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fsanghaistadtroda%2F&tabs=timeline&width=500&height=620&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true';
+  iframe.width = '100%';
+  iframe.height = '620';
+  iframe.style.border = 'none';
+  iframe.style.overflow = 'hidden';
+  iframe.scrolling = 'no';
+  iframe.frameBorder = '0';
+  iframe.allowFullscreen = true;
+  iframe.allow = 'autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share';
+  wrap.replaceChild(iframe, fbFacade);
+});
+
 // Gallery lightbox
 const galleryGrid = document.getElementById('galleryGrid');
 const lightbox = document.getElementById('lightbox');
